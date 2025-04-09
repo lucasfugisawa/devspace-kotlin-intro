@@ -1,25 +1,30 @@
 package com.fugisawa.p08Colecoes
 
-data class Usuario(val nome: String, val idade: Int, val ativo: Boolean)
-
-val usuarios = listOf(
-    Usuario("Ana", 28, true),
-    Usuario("Bruno", 35, false),
-    Usuario("Carlos", 22, true),
-    Usuario("Diana", 19, true),
-    Usuario("Eduarda", 17, false)
+data class Usuario(
+    val nome: String,
+    val idade: Int,
+    val ativo: Boolean,
 )
+
+val usuarios =
+    listOf(
+        Usuario("Ana", 28, true),
+        Usuario("Bruno", 35, false),
+        Usuario("Carlos", 22, true),
+        Usuario("Diana", 19, true),
+        Usuario("Eduarda", 17, false),
+    )
 
 fun main() {
     // FILTRANDO E ORDENANDO:
     // Filtrar apenas ativos maiores de 21 e ordenar por nome
-    val ativosMaiores = usuarios
-        .filter { it.ativo && it.idade > 21 }
-        .sortedBy { it.nome }
-        .map { it.nome }
+    val ativosMaiores =
+        usuarios
+            .filter { it.ativo && it.idade > 21 }
+            .sortedBy { it.nome }
+            .map { it.nome }
 
     println("Ativos maiores de 21: $ativosMaiores")
-
 
     // AGRUPANDO:
     val porAtividade = usuarios.groupBy { it.ativo }
@@ -29,7 +34,6 @@ fun main() {
 
     println("Usuários inativos:")
     porAtividade[false]?.forEach { println("- ${it.nome}") }
-
 
     // VERIFICANDO CONDIÇÕES:
     val todosAtivos = usuarios.all { it.ativo }
@@ -41,11 +45,11 @@ fun main() {
     val maioresDeIdade = usuarios.count { it.idade >= 18 }
     println("Maiores de idade: $maioresDeIdade")
 
-
     // SELECIONANDO PRIMEIROS / ÚLTIMOS:
-    val nomesOrdenados = usuarios
-        .map { it.nome }
-        .sorted()
+    val nomesOrdenados =
+        usuarios
+            .map { it.nome }
+            .sorted()
 
     val primeiros3 = nomesOrdenados.take(3)
     val ultimos3 = nomesOrdenados.takeLast(3)
@@ -57,7 +61,6 @@ fun main() {
 
     println("Todos menos os 3 primeiros: $todosMenosOs3Primeiros")
     println("Todos menos os 3 últimos: $todosMenosOs3Ultimos")
-
 
     // OUTROS: .associateBy, .distinctBy, etc.
 }
