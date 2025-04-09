@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.1.10"
+    id("org.jmailen.kotlinter") version "5.0.1"
 }
 
 group = "com.fugisawa"
