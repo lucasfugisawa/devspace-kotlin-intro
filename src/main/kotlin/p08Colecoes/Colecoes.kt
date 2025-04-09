@@ -8,11 +8,16 @@ data class Usuario(
 
 val usuarios =
     listOf(
-        Usuario("Ana", 28, true),
         Usuario("Bruno", 35, false),
+        Usuario("Maria", 17, false),
+        Usuario("Felipe", 40, true),
+        Usuario("Heitor", 31, true),
+        Usuario("Daniela", 19, true),
+        Usuario("Isabela", 16, true),
+        Usuario("Gabriela", 23, false),
         Usuario("Carlos", 22, true),
-        Usuario("Diana", 19, true),
-        Usuario("Eduarda", 17, false),
+        Usuario("Ana", 28, true),
+        Usuario("João", 28, true),
     )
 
 fun main() {
