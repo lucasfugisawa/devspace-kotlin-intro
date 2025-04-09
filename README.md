@@ -26,8 +26,7 @@
 - Expressões `when`.
 - Funções de extensão.
 - Loops e Ranges
-- Coleções e lambdas.
-- Scope Functions para código mais delcarativo.
+- Coleções.
 
 ## Mais recursos para aprender ou aprofundar em Kotlin:
 
